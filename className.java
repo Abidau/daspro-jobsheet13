@@ -5,6 +5,7 @@ public class className {
     static String [] jenis = new String[100];
     static String [] tingkat = new String[100];
     static int [] tahun = new int[100];
+    static int i = 0;
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
