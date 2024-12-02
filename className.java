@@ -7,7 +7,7 @@ public class className {
     static int [] tahun = new int[100];
 
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
         while (true) {
             System.out.println("=== PENCATATAN PRESTASI MAHASISWA ===");
