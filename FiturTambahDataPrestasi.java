@@ -5,7 +5,6 @@ public class FiturTambahDataPrestasi {
     static String [] jenis = new String[100];
     static String [] tingkat = new String[100];
     static int [] tahun = new int[100];
-    static int i = 0;
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -34,6 +33,7 @@ public class FiturTambahDataPrestasi {
     
     static void tambahDataPrestasi() {
         Scanner sc = new Scanner(System.in);
+        int i = 0;
 
         System.out.print("Masukkan Nama Mahasiswa: ");
         nama[i] = sc.nextLine();
@@ -43,7 +43,7 @@ public class FiturTambahDataPrestasi {
         jenis[i] = sc.nextLine();
         System.out.print("Masukkan Tingkat Prestasi (Lokal/Nasioal/Internasional): ");
         tingkat[i] = sc.nextLine();
-        
+
         while (true) {
             System.out.print("Masukkan Tahun Prestasi (2010 - 2024): ");
             int thn = sc.nextInt();
