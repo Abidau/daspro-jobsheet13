@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class className {
+public class main {
     static String [] nama = new String[100];
     static String [] nim = new String[100];
     static String [] jenis = new String[100];
