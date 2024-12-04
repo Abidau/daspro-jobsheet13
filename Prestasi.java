@@ -42,8 +42,18 @@ public class Prestasi {
         nim[i] = sc.nextLine();
         System.out.print("Masukkan Jenis Prestasi: ");
         jenis[i] = sc.nextLine();
-        System.out.print("Masukkan Tingkat Prestasi (Lokal/Nasioal/Internasional): ");
-        tingkat[i] = sc.nextLine();
+        
+        while (true) {
+            System.out.print("Masukkan Tingkat Prestasi (Lokal/Nasioal/Internasional): ");
+            String tgkt = sc.nextLine();
+            if (tgkt.equalsIgnoreCase("lokal") || tgkt.equalsIgnoreCase("nasional") || tgkt.equalsIgnoreCase("internasional")) {
+                tingkat[i] = tgkt; 
+                break;
+            } else {
+                System.out.println("Tingkat tidak valid. Coba lagi.");
+                continue;
+            }
+        }
 
         while (true) {
             System.out.print("Masukkan Tahun Prestasi (2010 - 2024): ");
