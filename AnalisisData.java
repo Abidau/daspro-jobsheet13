@@ -83,17 +83,6 @@ public class AnalisisData {
                 System.out.println();
             }
         }
-
-        // for (int i = 0; i < nama.length; i++) {
-        //     if (nama[i] != null) {
-        //         if (jenisPrestasi.equalsIgnoreCase(jenis[i])) {
-        //             System.out.println();
-        //             System.out.println("=== ANALISIS PRESTASI ===");
-        //             System.out.println("Nama: " + nama[i] + " | NIM: " + nim[i] + " | Jenis: " + jenis[i] + " | Tingkat: " + tingkat[i] + " | Tahun: " + tahun[i]);
-        //             System.out.println();
-        //         }
-        //     }
-        // }
     }
 }
 }
