@@ -23,9 +23,9 @@ public class FiturTambahDataPrestasi {
             if (menu == 1) {
                 tambahDataPrestasi();
             } else if (menu == 2) {
-                System.out.println("FITUR TAMPIL PRESTASI");;
+                System.out.println("FITUR TAMPILKAN DATA PRESTASI");
             } else if (menu == 3) {
-                System.out.println("FITUR ANALISIS PRESTASI");;
+                System.out.println("FITUR ANALISIS PRESTASI");
             } else if (menu == 4) {
                 break;
             } 
@@ -41,8 +41,17 @@ public class FiturTambahDataPrestasi {
         nim[i] = sc.nextLine();
         System.out.print("Masukkan Jenis Prestasi: ");
         jenis[i] = sc.nextLine();
-        System.out.print("Masukkan Tingkat Prestasi (Lokal/Nasioal/Internasional): ");
-        tingkat[i] = sc.nextLine();
+        while (true) {
+            System.out.print("Masukkan Tingkat Prestasi (Lokal/Nasioal/Internasional): ");
+            String tgkt = sc.nextLine();
+            if (tgkt.equalsIgnoreCase("lokal") || tgkt.equalsIgnoreCase("nasional") || tgkt.equalsIgnoreCase("internasional")) {
+                tingkat[i] = tgkt; 
+                break;
+            } else {
+                System.out.println("Tingkat tidak valid. Coba lagi.");
+                continue;
+            }
+        }
 
         while (true) {
             System.out.print("Masukkan Tahun Prestasi (2010 - 2024): ");
