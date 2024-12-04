@@ -1,11 +1,15 @@
 import java.util.Scanner;
 public class Prestasi {
-    static String [][] data = new String[100][5];
+    static String [] nama = new String[100];
+    static String [] nim = new String[100];
+    static String [] jenis = new String[100];
+    static String [] tingkat = new String[100];
+    static int [] tahun = new int[100];
     static int i = 0;
-    static Scanner sc = new Scanner(System.in);
-    
+
     public static void main(String[] args) {
-        
+        Scanner sc = new Scanner(System.in);
+
         while (true) {
             System.out.println("=== PENCATATAN PRESTASI MAHASISWA ===");
             System.out.println("1. Tambah Data Prestasi");
@@ -30,21 +34,22 @@ public class Prestasi {
     }
 
     static void tambahDataPrestasi() {
+        Scanner sc = new Scanner(System.in);
 
         System.out.print("Masukkan Nama Mahasiswa: ");
-        data[i][0] = sc.nextLine();
+        nama[i] = sc.nextLine();
         System.out.print("Masukkan NIM Mahasiswa: ");
-        data[i][1] = sc.nextLine();
+        nim[i] = sc.nextLine();
         System.out.print("Masukkan Jenis Prestasi: ");
-        data[i][2] = sc.nextLine();
+        jenis[i] = sc.nextLine();
         System.out.print("Masukkan Tingkat Prestasi (Lokal/Nasioal/Internasional): ");
-        data[i][3] = sc.nextLine();
+        tingkat[i] = sc.nextLine();
 
         while (true) {
             System.out.print("Masukkan Tahun Prestasi (2010 - 2024): ");
             int thn = sc.nextInt();
             if (thn >= 2010 && thn <= 2024) {
-                data[i][4] = String.valueOf(thn);
+                tahun[i] = thn;
                 System.out.println("Data prestasi berhasil ditambahkan.");
                 System.out.println();
                 i++;  
@@ -58,23 +63,23 @@ public class Prestasi {
 
     static void tampilkanSemuaPrestasi() {
         for (int j = 0; j < i; j++) {
-            System.out.println("Nama: " + data[j][0] + " | NIM: " + data[j][1] + " | Jenis: " + data[j][2] + " | Tingkat: " + data[j][3] + " | Tahun: " + data[j][4]);
+            System.out.println("Nama: " + nama[j] + " | NIM: " + nim[j] + " | Jenis: " + jenis[j] + " | Tingkat: " + tingkat[j] + " | Tahun: " + tahun[j]);
         }
     }
 
     static void analisisPrestasi() {
+        Scanner sc = new Scanner(System.in);
         
         System.out.print("Masukkan Jenis Prestasi yang Ingin Dianalisis: ");
         String jenisPrestasi = sc.nextLine();
 
         for (int j = 0; j < i; j++) {
-            if (jenisPrestasi.equalsIgnoreCase(data[j][2])) {
+            if (jenisPrestasi.equalsIgnoreCase(jenis[j])) {
                 System.out.println();
                 System.out.println("=== ANALISIS PRESTASI ===");
-                System.out.println("Nama: " + data[j][0] + " | NIM: " + data[j][1] + " | Jenis: " + data[j][2] + " | Tingkat: " + data[j][3] + " | Tahun: " + data[j][4]);
+                System.out.println("Nama: " + nama[j] + " | NIM: " + nim[j] + " | Jenis: " + jenis[j] + " | Tingkat: " + tingkat[j] + " | Tahun: " + tahun[j]);
                 System.out.println();
             }
         }
     }
 }
-
