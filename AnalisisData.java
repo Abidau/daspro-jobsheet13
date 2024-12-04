@@ -64,14 +64,9 @@ public class AnalisisData {
     }
 
     static void tampilkanSemuaPrestasi() {
-        for (int i = 0; i < nama.length ; i++) {
-            if (nama[i] != null) {
-                System.out.println("Nama: " + nama[i] + " | NIM : " + nim[i] + " | Jenis: " + jenis[i] + " | Tingkat: " + tingkat[i] + " | Tahun: " + tahun[i]);
-            } else {
-                System.out.println("Belum Ada Data Prestasi.");
-                break;
-            }
-        }        
+        for (int j = 0; j < i; j++) {
+            System.out.println("Nama: " + nama[j] + " | NIM: " + nim[j] + " | Jenis: " + jenis[j] + " | Tingkat: " + tingkat[j] + " | Tahun: " + tahun[j]);
+        }
     }
 
     static void analisisPrestasi() {
@@ -80,16 +75,25 @@ public class AnalisisData {
         System.out.print("Masukkan Jenis Prestasi yang Ingin Dianalisis: ");
         String jenisPrestasi = sc.nextLine();
 
-        for (int i = 0; i < nama.length; i++) {
-            if (nama[i] != null) {
-                if (jenisPrestasi.equalsIgnoreCase(jenis[i])) {
-                    System.out.println();
-                    System.out.println("=== ANALISIS PRESTASI ===");
-                    System.out.println("Nama: " + nama[i] + " | NIM: " + nim[i] + " | Jenis: " + jenis[i] + " | Tingkat: " + tingkat[i] + " | Tahun: " + tahun[i]);
-                    System.out.println();
-                }
+        for (int j = 0; j < i; j++) {
+            if (jenisPrestasi.equalsIgnoreCase(jenis[j])) {
+                System.out.println();
+                System.out.println("=== ANALISIS PRESTASI ===");
+                System.out.println("Nama: " + nama[j] + " | NIM: " + nim[j] + " | Jenis: " + jenis[j] + " | Tingkat: " + tingkat[j] + " | Tahun: " + tahun[j]);
+                System.out.println();
             }
         }
+
+        // for (int i = 0; i < nama.length; i++) {
+        //     if (nama[i] != null) {
+        //         if (jenisPrestasi.equalsIgnoreCase(jenis[i])) {
+        //             System.out.println();
+        //             System.out.println("=== ANALISIS PRESTASI ===");
+        //             System.out.println("Nama: " + nama[i] + " | NIM: " + nim[i] + " | Jenis: " + jenis[i] + " | Tingkat: " + tingkat[i] + " | Tahun: " + tahun[i]);
+        //             System.out.println();
+        //         }
+        //     }
+        // }
     }
 }
 }
