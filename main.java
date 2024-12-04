@@ -27,6 +27,7 @@ public class main {
             } else if (menu == 3) {
                 analisisPrestasi();
             } else if (menu == 4) {
+                System.out.println("Program Selesai. Terima Kasih!");
                 break;
             } 
         }
